@@ -1,9 +1,3 @@
---start
-local e = "this works, wow"
-
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(e)
-
-
 
 --instances
 
@@ -19,6 +13,7 @@ local tab1 = Instance.new("Frame")
 local button = Instance.new("TextButton")
 local button1 = Instance.new("TextButton")
 local test = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
 
 --properties???
 
@@ -68,6 +63,15 @@ test.Text = "skibidi"
 test.Position = UDim2.new(0.232, 0,0.117, 0)
 test.Size = UDim2.new(0, 200,0, 50)
 
+close.Parent = main
+close.Size = UDim2.new(0, 51,0, 50)
+close.Position = UDim2.new(0.905, 0,0, 0)
+dec1:Clone().Parent = close
+close.BackgroundTransparency = 0.6
+close.TextScaled = true
+close.TextColor3 = Color3.fromRGB(255,255,255)
+close.Text = "Close"
+
 tab.Parent = main
 tab.Size = UDim2.new(0, 409,0, 231)
 tab.Position = UDim2.new(0.255, 0,0.348, 0)
@@ -84,7 +88,7 @@ title.Parent = main
 title.Position = UDim2.new(0.042, 0,0.093, 0)
 title.Size = UDim2.new(0, 503,0, 50)
 title.TextScaled = true
- 
+
 dec1.Parent = main
 
 dec2.Parent = main
@@ -112,5 +116,20 @@ button1.MouseButton1Up:Connect(function()
 	tab1.Visible = false
 end)
 
+button.TouchTap:Connect(function()
+	tab.Visible = false
+	tab1.Visible = true
+end)
 
+button1.TouchTap:Connect(function()
+	tab.Visible = true
+	tab1.Visible = false
+end)
 
+close.MouseButton1Up:Connect(function()
+	gui:Remove()
+end)
+
+close.TouchTap:Connect(function()
+	gui:Remove()
+end)
