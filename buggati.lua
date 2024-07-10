@@ -1,3 +1,10 @@
+--start
+local e = "this works, wow"
+
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(e)
+
+
+
 --instances
 
 local gui = Instance.new("ScreenGui")
