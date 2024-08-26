@@ -6,7 +6,6 @@ local bar = Instance.new("Frame")
 local bar1 = Instance.new("Frame")
 local title = Instance.new("TextLabel")
 local dec1 = Instance.new("UICorner")
-local dec2 = Instance.new("UIStroke")
 local tab = Instance.new("Frame")
 local tab1 = Instance.new("Frame")
 
@@ -89,10 +88,6 @@ title.Size = UDim2.new(0, 503,0, 50)
 title.TextScaled = true
 
 dec1.Parent = main
-
-dec2.Parent = main
-dec2.Thickness = 5
-dec2.Color = Color3.fromRGB(176,176,176)
 
 --stuff
 
